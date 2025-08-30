@@ -1,0 +1,178 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+/* Fundo gradiente animado */
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #000000, #333333, #9e880a, #1a1a1a);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-bottom: 2px solid #af9711;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #a38d12;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.4em;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: #c4a914;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 60px;
+  background-color: rgba(30, 30, 30, 0.75);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section a:hover {
+    text-decoration: none;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #a38b05;
+}
+
+h2 {
+  font-size: 2em;
+  color: #9e8808;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ad9613;
+  padding-bottom: 5px;
+}
+
+p, li {
+  font-size: 1.1em;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.projeto {
+  margin-bottom: 20px;
+}
+
+.projeto h3 {
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+
+/* Links */
+a {
+  color: #b19a1a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #aaa;
+  border-top: 2px solid #FFD700;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1.2s ease both;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
